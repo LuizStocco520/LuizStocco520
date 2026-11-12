@@ -4,6 +4,11 @@ Computer Engineering student in Brazil. I build AI automation with n8n and LLMs,
 
 #### Projects
 
+**[Red-Teaming the Ticket-Triage Bot](https://github.com/LuizStocco520/n8n-ai-triage-redteam)**: 37 prompt-injection and data-leak attacks against the ticket-triage bot below, mapped to the OWASP Top 10 for LLM Applications and MITRE ATLAS, with layered defenses measured before and after. Built with n8n Guardrails, Groq (gpt-oss-120b and gpt-oss-20b) and promptfoo.
+
+- Attacks that succeeded: 8 of 36 before the fixes, 1 of 32 after. Each attack ran once per round, and one known gap is still open.
+- The cost of the defenses, measured too: 8 of 57 answers to legitimate tickets blocked in the final version, and about 3 times the tokens per ticket.
+
 **[AI Ticket Triage with n8n](https://github.com/LuizStocco520/n8n-ai-ticket-triage)**: classifies IT support tickets with an LLM, logs them to Google Sheets, emails an alert for high-urgency tickets and reports its own failures. Built with n8n, Groq (gpt-oss-120b), Google Sheets and Gmail.
 
 - Evaluated on 20 labeled tickets, 3 runs per prompt version. Final prompt: category right in 60 of 60 answers, urgency in 58 of 60.
